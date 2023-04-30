@@ -31,7 +31,7 @@ class MainViewModel : ViewModel() {
         return MutableLiveData(Counter(count))
     }*/
     init {
-        _counter.value = Counter(0)
+      //  _counter.value = Counter(0)
         getRandomJoke()
     }
 
@@ -47,7 +47,7 @@ class MainViewModel : ViewModel() {
             .subscribe(::onRandomJoke, ::onError)
     }
 
-    private fun onRandomJoke(jokeResponse: JokeResponse) {
+    private fun onRandomJoke(jokeResponse: JokeResponse?) {
         _joke.postValue(jokeResponse)
     }
 

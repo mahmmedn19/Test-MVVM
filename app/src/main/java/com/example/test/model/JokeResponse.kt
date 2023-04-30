@@ -21,5 +21,7 @@ data class JokeResponse(
     @SerializedName("setup")
     val setup: String? = null,
     @SerializedName("type")
-    val type: String? = null
+    val type: String? = null,
+    @SerializedName("joke")
+    val joke: String? = null
 )

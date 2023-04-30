@@ -29,7 +29,7 @@
             android:id="@+id/textView_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(viewModel.joke)}"
+            android:text="@{viewModel.joke.joke}"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
