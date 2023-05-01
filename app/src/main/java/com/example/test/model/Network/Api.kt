@@ -1,5 +1,6 @@
 package com.example.test.model.Network
 
+import com.example.test.utils.Constant
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -15,7 +16,7 @@ object Api {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://v2.jokeapi.dev/")
+            .baseUrl(Constant.BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
