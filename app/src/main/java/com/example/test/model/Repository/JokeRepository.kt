@@ -1,6 +1,6 @@
 package com.example.test.model.Repository
 
-import com.example.test.model.JokeResponse
+import com.example.test.model.data.JokeResponse
 import com.example.test.model.Network.Api
 import io.reactivex.rxjava3.core.Single
 

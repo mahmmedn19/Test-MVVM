@@ -1,4 +1,4 @@
-package com.example.test.model
+package com.example.test.model.data
 
 
 import com.google.gson.annotations.SerializedName
@@ -10,8 +10,6 @@ data class JokeResponse(
     val delivery: String? = null,
     @SerializedName("error")
     val error: Boolean? = null,
-    @SerializedName("flags")
-    val flags: Flags? = null,
     @SerializedName("id")
     val id: Int? = null,
     @SerializedName("lang")
