@@ -13,6 +13,7 @@ class MainViewModel : ViewModel() {
 
 
     private val jokeRepository = JokeRepository()
+
     private val _joke = MutableLiveData<JokeResponse>()
     val joke: LiveData<JokeResponse>
         get() = _joke
@@ -23,6 +24,7 @@ class MainViewModel : ViewModel() {
 
     fun getRandomJoke() {
         jokeRepository.getRandomJoke()
+            .filter { it.joke?.isNotBlank() == true }
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe(::onRandomJoke, ::onError)
